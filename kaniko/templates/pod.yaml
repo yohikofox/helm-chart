@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kaniko
+  namespace: kamiko-system
+spec:
+  containers:
+  - name: kaniko-{{ .Values.name}}
+    image: gcr.io/kaniko-project/executor:latest
+    args: ["--dockerfile={{ .Values.docker.dockerfile.path "/" .Values.docker.dockerfile.name }}",
+            "--context=git://{{ .Values.git.token }}@github.com/{{ .Values.git.repository.name }}.git#refs/heads/{{ .Values.git.repository.branch-name }}",
+            "--destination={{ .Values.image.name }}"]
+    volumeMounts:
+      - name: kaniko-secret
+        mountPath: /kaniko/.docker
+    env: {{ range $key, $value := .Values.docker.env }}
+      - name: {{ $key }}
+        value: {{ $value }}
+    {{ end }}
+  restartPolicy: Never
+  volumes:
+    - name: kaniko-secret
+      secret:
+        secretName: {{ .Values.docker.secretName }}
+        items:
+          - key: .dockerconfigjson
+            path: config.json

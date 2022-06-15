@@ -1,0 +1,10 @@
+{{- $decodedAuth = print .Values.docker_registry.docker_config_json.username ":" .Values.docker_registry.docker_config_json.password -}}
+{
+    "auths": {
+        "{{ .Values.docker_registry.docker_config_json.namespace }}": {
+            "username": "{{ .Values.docker_registry.docker_config_json.username }}",
+            "password": "{{ .Values.docker_registry.docker_config_json.password }}",
+            "auth": "{{ $decodedAuth | b64enc }}"
+        }
+    }
+}

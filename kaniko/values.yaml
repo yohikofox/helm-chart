@@ -1,0 +1,13 @@
+name: "web"
+image:
+  name: # image name ex: docker/image:latest
+docker:
+  secretName: # docker registry secret name
+  dockerfile:
+    path: # docker file location
+    name: # dockerfile name 
+git:
+  token: # Github PAT
+  repository: 
+    name: # github repository name
+    branch-name: # the branch you want to build
