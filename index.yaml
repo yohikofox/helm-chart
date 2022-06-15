@@ -9,6 +9,6 @@ entries:
     name: kaniko
     type: application
     urls:
-    - https://github.com/yohikofox/helm-chart/kaniko-0.1.0.tgz
+    - https://yohikofox.github.io/helm-chart/kaniko-0.1.0.tgz
     version: 0.1.0
 generated: "2022-06-15T14:18:33.4361758+02:00"
