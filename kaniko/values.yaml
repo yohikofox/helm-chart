@@ -1,13 +1,20 @@
 name: "web"
+namespace:
+  name: # namespace name
 image:
   name: # image name ex: docker/image:latest
 docker:
   secretName: # docker registry secret name
   dockerfile:
     path: # docker file location
-    name: # dockerfile name 
+    name: # dockerfile name
 git:
   token: # Github PAT
-  repository: 
+  repository:
     name: # github repository name
-    branch-name: # the branch you want to build
+    branch_name: # the branch you want to build
+docker_registry:
+  docker_config_json:
+    namespace: #
+    username: #
+    password: #

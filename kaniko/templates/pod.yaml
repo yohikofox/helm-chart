@@ -7,9 +7,10 @@ spec:
   containers:
   - name: kaniko-{{ .Values.name}}
     image: gcr.io/kaniko-project/executor:latest
-    args: ["--dockerfile={{ .Values.docker.dockerfile.path "/" .Values.docker.dockerfile.name }}",
-            "--context=git://{{ .Values.git.token }}@github.com/{{ .Values.git.repository.name }}.git#refs/heads/{{ .Values.git.repository.branch-name }}",
-            "--destination={{ .Values.image.name }}"]
+    args: 
+      - "--dockerfile={{ printf "%s/%s" .Values.docker.dockerfile.path .Values.docker.dockerfile.name }}"
+      - "--context=git://{{ .Values.git.token }}@github.com/{{ .Values.git.repository.name }}.git#refs/heads/{{ .Values.git.repository.branch_name }}"
+      - "--destination={{ .Values.image.name }}"
     volumeMounts:
       - name: kaniko-secret
         mountPath: /kaniko/.docker
