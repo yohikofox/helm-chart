@@ -3,12 +3,12 @@ entries:
   kaniko:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-15T14:18:33.4407913+02:00"
+    created: "2022-06-21T09:57:20.7034896+02:00"
     description: A Helm chart for Kubernetes
-    digest: 8296c9cabe49ab2c4e7c92213d8941e38d137ebb0ffb05e205c2bd98f6a37517
+    digest: bbb667f686b743fd0f0c7180a6ff31db0d8c25a1698fedc1c07a06de5fe07e61
     name: kaniko
     type: application
     urls:
     - https://yohikofox.github.io/helm-chart/kaniko-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-15T14:18:33.4361758+02:00"
+generated: "2022-06-21T09:57:20.7005156+02:00"
