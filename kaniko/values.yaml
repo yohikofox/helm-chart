@@ -1,20 +1,21 @@
-name: "web"
+name: app name | replace me
 namespace:
-  name: # namespace name
+  name: default | replace me # namespace name
 image:
-  name: # image name ex: docker/image:latest
+  name: "nginx | replace me" # image name ex: docker/image:latest
 docker:
-  secretName: # docker registry secret name
   dockerfile:
-    path: # docker file location
-    name: # dockerfile name
+    path: ./ # docker file location
+    name: Dockerfile # dockerfile name
+  debug: 
+    enabled: false # set to true to activate debug mode
 git:
-  token: # Github PAT
+  token: PAT | replace me # Github PAT
   repository:
-    name: # github repository name
-    branch_name: # the branch you want to build
+    name: node/node | replace me # github repository name
+    branch: main # the branch you want to build
 docker_registry:
   docker_config_json:
-    namespace: #
-    username: #
-    password: #
+    namespace: docker.io/anybody | replace me
+    username: username | replace me
+    password: password | replace me

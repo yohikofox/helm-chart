@@ -1,16 +1,26 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: kaniko
-  namespace: kamiko-system
+  name: {{ printf "kaniko-%s-%s" .Values.name uuidv4 }}
+  namespace: {{ printf "%s-%s" .Values.namespace.name .Values.name }}
 spec:
+  terminationGracePeriodSeconds: 0
   containers:
   - name: kaniko-{{ .Values.name}}
     image: gcr.io/kaniko-project/executor:latest
-    args: 
-      - "--dockerfile={{ printf "%s/%s" .Values.docker.dockerfile.path .Values.docker.dockerfile.name }}"
-      - "--context=git://{{ .Values.git.token }}@github.com/{{ .Values.git.repository.name }}.git#refs/heads/{{ .Values.git.repository.branch_name }}"
-      - "--destination={{ .Values.image.name }}"
+    args: ["--dockerfile={{ printf "%s/%s" .Values.docker.dockerfile.path .Values.docker.dockerfile.name }}",
+            "--context={{ printf "git://%s@github.com/%s.git#refs/heads/%s" .Values.git.token .Values.git.repository.name .Values.git.repository.branch }}",
+            "--destination={{ .Values.image.name }}",
+            {{- if .Values.docker.context }}
+            "--context-sub-path={{ .Values.docker.context }}",
+            {{- end }}
+            {{- range $key, $value := .Values.docker.buildArgs }} 
+            "--build-arg={{ $value }}",
+            {{- end }}
+            {{- if .Values.docker.debug.enabled }}
+            "--verbosity=debug",
+            {{- end }}
+            ]
     volumeMounts:
       - name: kaniko-secret
         mountPath: /kaniko/.docker
