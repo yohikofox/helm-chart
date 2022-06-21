@@ -29,12 +29,7 @@ spec:
         value: {{ $value }}
     {{ end }}
     resources:
-     requests:
-       memory: "1024Mi"
-       cpu: "1000m"
-     limits:
-       memory: "3072Mi"
-       cpu: "1500m"
+      {{- toYaml .Values.resources | nindent 12 }}
   restartPolicy: Never
   volumes:
     - name: kaniko-secret

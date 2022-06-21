@@ -7,7 +7,7 @@ docker:
   dockerfile:
     path: ./ # docker file location
     name: Dockerfile # dockerfile name
-  debug: 
+  debug:
     enabled: false # set to true to activate debug mode
 git:
   token: PAT | replace me # Github PAT
@@ -19,3 +19,10 @@ docker_registry:
     namespace: docker.io/anybody | replace me
     username: username | replace me
     password: password | replace me
+resources:
+  requests:
+    memory: "1024Mi"
+    cpu: "150m"
+  limits:
+    memory: "2048Mi"
+    cpu: "200m"
