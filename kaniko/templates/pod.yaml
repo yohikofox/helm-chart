@@ -4,6 +4,15 @@ metadata:
   name: {{ printf "kaniko-%s-%s" .Values.name uuidv4 }}
   namespace: {{ printf "%s-%s" .Values.namespace.name .Values.name }}
 spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: instance
+            operator: In
+            values:
+            - build
   terminationGracePeriodSeconds: 0
   containers:
   - name: kaniko-{{ .Values.name}}
