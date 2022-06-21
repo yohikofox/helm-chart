@@ -4,8 +4,10 @@ metadata:
   name: {{ printf "kaniko-%s-%s" .Values.name uuidv4 }}
   namespace: {{ printf "%s-%s" .Values.namespace.name .Values.name }}
 spec:
+  {{ if .Values.affinity.enabled }}
   affinity:
     {{- toYaml .Values.affinity | nindent 12 }}
+  {{ end }}
   terminationGracePeriodSeconds: 0
   containers:
   - name: kaniko-{{ .Values.name}}
