@@ -28,6 +28,13 @@ spec:
       - name: {{ $key }}
         value: {{ $value }}
     {{ end }}
+    resources:
+     requests:
+       memory: "2048Mi"
+       cpu: "250m"
+     limits:
+       memory: "3072Mi"
+       cpu: "500m"
   restartPolicy: Never
   volumes:
     - name: kaniko-secret
