@@ -27,7 +27,6 @@ resources:
     memory: "2048Mi"
     cpu: "200m"
 affinity:
-  enabled: false
   nodeAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       nodeSelectorTerms:
