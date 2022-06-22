@@ -1,10 +1,11 @@
-name: app name | replace me
+name: appName # replace me
 namespace:
   create: false
-  name: default | replace me # namespace name
+  name: default # namespace name - replace me
 image:
   name: "nginx | replace me" # image name ex: docker/image:latest
 docker:
+  secretName: "registry-secret" 
   dockerfile:
     path: ./ # docker file location
     name: Dockerfile # dockerfile name

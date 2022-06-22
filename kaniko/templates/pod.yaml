@@ -36,7 +36,7 @@ spec:
   volumes:
     - name: kaniko-secret
       secret:
-        secretName: {{ .Values.docker.secretName }}
+        secretName: {{ printf "%s-%s" .Values.docker.secretName .Values.name }}
         items:
           - key: .dockerconfigjson
             path: config.json
