@@ -1,5 +1,6 @@
 name: app name | replace me
 namespace:
+  create: false
   name: default | replace me # namespace name
 image:
   name: "nginx | replace me" # image name ex: docker/image:latest
