@@ -1,0 +1,10 @@
+name: name
+secretName: secret
+namespace:
+  enabled: false
+  name: namespace
+issuerRef:  
+    name: issuerName
+    kind: ClusterIssuer
+dnsNames:
+  - "example.com"

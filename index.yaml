@@ -1,14 +1,25 @@
 apiVersion: v1
 entries:
+  certificate:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-06-24T19:47:55.5270936+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 34f0b56a413cc192ab11c5ce1b4bbe6708952b384bf56753db17a02110df70e5
+    name: certificate
+    type: application
+    urls:
+    - https://yohikofox.github.io/helm-chart/certificate-0.1.0.tgz
+    version: 0.1.0
   kaniko:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-21T09:58:55.4369939+02:00"
+    created: "2022-06-24T19:47:55.5276197+02:00"
     description: A Helm chart for Kubernetes
-    digest: bbb667f686b743fd0f0c7180a6ff31db0d8c25a1698fedc1c07a06de5fe07e61
+    digest: da0c17eb822e58e8236320282bce2e7d030bb3bc874115d686c10c1c81b752f1
     name: kaniko
     type: application
     urls:
     - https://yohikofox.github.io/helm-chart/kaniko-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-21T09:58:55.4368602+02:00"
+generated: "2022-06-24T19:47:55.5249628+02:00"

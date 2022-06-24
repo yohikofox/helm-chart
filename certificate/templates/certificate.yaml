@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Values.name }}
+{{ if .Values.namespace.enabled }}
+  namespace: {{ .Values.namespace.name}}
+{{ end }}
+spec:
+  secretName: {{ .Values.secretName}}
+  issuerRef: 
+    {{- toYaml .Values.issuerRef | nindent 12 }}
+  commonName: {{ .Values.name }}
+  dnsNames:
+    {{- toYaml .Values.dnsNames | nindent 12 }}
