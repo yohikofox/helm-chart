@@ -43,10 +43,18 @@ spec:
             httpGet:
               path: /
               port: http
+            periodSeconds: 5
           readinessProbe:
             httpGet:
               path: /realms/master
               port: http
+            initialDelaySeconds: 10
+          startupProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 5
           env:
             - name: KEYCLOAK_ADMIN
               value: {{ .Values.adminUser }}
