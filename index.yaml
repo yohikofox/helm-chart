@@ -3,7 +3,7 @@ entries:
   certificate:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-28T09:13:56.6245596+02:00"
+    created: "2022-06-28T09:18:08.9580221+02:00"
     description: A Helm chart for Kubernetes
     digest: 2275a0412c9e3f24442d0af29c5aae73d9e939e0a652c78b8630c94b65cf187b
     name: certificate
@@ -14,7 +14,7 @@ entries:
   kaniko:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-28T09:13:56.6245596+02:00"
+    created: "2022-06-28T09:18:08.9585607+02:00"
     description: A Helm chart for Kubernetes
     digest: da0c17eb822e58e8236320282bce2e7d030bb3bc874115d686c10c1c81b752f1
     name: kaniko
@@ -25,9 +25,9 @@ entries:
   keycloak:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-28T09:13:56.62708+02:00"
+    created: "2022-06-28T09:18:08.961295+02:00"
     description: A Helm chart for Kubernetes
-    digest: 0b7bde922109e0e6623ee3793b20ed19b875f197d7e322de0cc58091f6f153e2
+    digest: da677e06f82a8f93a7c0d4b6a48a2f61c3a4d43b7e8f1e315f123c88e6a5758b
     name: keycloak
     type: application
     urls:
@@ -35,7 +35,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-28T09:13:56.62708+02:00"
+    created: "2022-06-28T09:18:08.9607348+02:00"
     description: A Helm chart for Kubernetes
     digest: 98ea803e55e5d16c4a70e33ca08b74b18a9a72641d4f77abbc1cd4bc35e7a911
     name: keycloak
@@ -45,7 +45,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-28T09:13:56.6264571+02:00"
+    created: "2022-06-28T09:18:08.9601723+02:00"
     description: A Helm chart for Kubernetes
     digest: 8ce77a59d0878e674aa7f2b4480d0a82e3aafe246fdb449bca0cdc0b014d08d0
     name: keycloak
@@ -55,7 +55,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-28T09:13:56.6263633+02:00"
+    created: "2022-06-28T09:18:08.9601723+02:00"
     description: A Helm chart for Kubernetes
     digest: 9efcb636eac5356f796241accdd7ec9caa7cedd5b50507496e4bfb8cf83ac028
     name: keycloak
@@ -65,7 +65,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-28T09:13:56.6258233+02:00"
+    created: "2022-06-28T09:18:08.9596313+02:00"
     description: A Helm chart for Kubernetes
     digest: d559787e11410a58b91979054b7a24b8417909d2a8c4fcf7aef626a72f96b57b
     name: keycloak
@@ -75,7 +75,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-28T09:13:56.6257028+02:00"
+    created: "2022-06-28T09:18:08.9591011+02:00"
     description: A Helm chart for Kubernetes
     digest: 8b3d03c5dd7ee20ea098c9029d76a0ad4c7cd8c86175dcf532cc66011da2d001
     name: keycloak
@@ -85,7 +85,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-28T09:13:56.6251823+02:00"
+    created: "2022-06-28T09:18:08.9591011+02:00"
     description: A Helm chart for Kubernetes
     digest: 6cdeea73ec2b8ec2088d51fffa748339f0ebba5a82876b98560e453d72cee6e8
     name: keycloak
@@ -93,4 +93,4 @@ entries:
     urls:
     - https://yohikofox.github.io/helm-chart/keycloak-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-28T09:13:56.6239514+02:00"
+generated: "2022-06-28T09:18:08.9574725+02:00"

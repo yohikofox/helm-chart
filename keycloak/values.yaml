@@ -92,3 +92,21 @@ proxy: edge
 
 namespace:
   name: default
+
+
+probes:
+  livenessProbe:
+    httpGet:
+      path: /
+      port: http
+    periodSeconds: 5
+  readinessProbe:
+    httpGet:
+      path: /realms/master
+      port: http
+    initialDelaySeconds: 30
+  startupProbe:
+    httpGet:
+      path: /realms/master
+      port: http
+    initialDelaySeconds: 60
