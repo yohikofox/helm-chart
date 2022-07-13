@@ -90,9 +90,17 @@ adminUser: admin
 adminPassword: admin
 proxy: edge
 
+dbActivated: false
+db: postgres
+dbUrl: jdbc:postgresql://localhost:5432/keycloak
+dbUsername: keycloak
+dbPassword: keycloak
+hostname: localhost
+
+features: token-exchange
+
 namespace:
   name: default
-
 
 probes:
   livenessProbe:

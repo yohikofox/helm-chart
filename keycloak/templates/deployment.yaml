@@ -52,6 +52,20 @@ spec:
               value: {{ .Values.adminPassword }}
             - name: KC_PROXY
               value: {{ .Values.proxy }}
+            - name: KC_FEATURES
+              value: {{ .Values.features }}
+            {{- if .Values.dbActivated }}
+            - name: KC_DB
+              value: {{ .Values.db }}
+            - name: KC_DB_URL
+              value: {{ .Values.dbUrl }}
+            - name: KC_DB_USERNAME
+              value: {{ .Values.dbUsername }}
+            - name: KC_DB_PASSWORD
+              value: {{ .Values.dbPassword }}
+            - name: KC_HOSTNAME
+              value: {{ .Values.hostname }}
+            {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
