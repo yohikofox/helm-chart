@@ -7,6 +7,7 @@ replicaCount: 1
 image:
   repository: nginx
   pullPolicy: IfNotPresent
+  port: 80
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
@@ -80,3 +81,15 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+env: []
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: http
+
+readinessProbe:
+  httpGet:
+    path: /
+    port: http
