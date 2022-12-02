@@ -4,6 +4,8 @@
 
 replicaCount: 1
 
+cmd: "start"
+
 image:
   repository: quay.io/keycloak/keycloak
   pullPolicy: IfNotPresent
