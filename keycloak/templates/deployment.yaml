@@ -63,8 +63,10 @@ spec:
               value: {{ .Values.dbUsername }}
             - name: KC_DB_PASSWORD
               value: {{ .Values.dbPassword }}
+            {{- end }}
+            {{- if .Values.hosting.enabled }}
             - name: KC_HOSTNAME
-              value: {{ .Values.hostname }}
+              value: {{ .Values.hosting.hostname }}
             {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}

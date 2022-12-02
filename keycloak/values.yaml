@@ -97,7 +97,11 @@ db: postgres
 dbUrl: jdbc:postgresql://localhost:5432/keycloak
 dbUsername: keycloak
 dbPassword: keycloak
-hostname: localhost
+
+hosting:
+  enabled: false
+  hostname: localhost
+
 
 features: token-exchange
 
